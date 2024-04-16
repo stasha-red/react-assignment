@@ -4,7 +4,7 @@
 
 To view this assignment on your machine you need the following installed:
 
--   NodeJS
+-   NodeJS >=18
 -   A web browser
 
 ## Get started :rocket:
