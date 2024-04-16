@@ -28,9 +28,9 @@ jobs:
     - name: Build
       run: npm run build --if-present
       
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-pages-artifact@v1
       with:
-          name: build-pages
+          name: github-pages
           path: build
   deploy:
     needs: build
