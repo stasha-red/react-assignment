@@ -1,5 +1,6 @@
 {
   "name": "new-frontend-assignment",
+  "homepage": "https://stasha-red.github.io/react-assignment",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
