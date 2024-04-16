@@ -22,7 +22,7 @@ jobs:
       run: npm i yarn
       
     - name: Install dependencies        
-      run: yarn i --frozen-lockfile
+      run: yarn install --frozen-lockfile
       
     - name: Build
       run: yarn build
