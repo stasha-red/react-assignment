@@ -1,0 +1,12 @@
+/* DO NOT CHANGE THIS ROOT CLASS NAME*/
+#task-2 {
+  .search-result {
+    padding: 1rem;
+    box-sizing: border-box;
+
+    > ul {
+      margin: 0;
+      padding-left: 1.1em;
+    }
+  }
+}

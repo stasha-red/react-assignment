@@ -1,4 +1,114 @@
 /* DO NOT CHANGE THIS ROOT CLASS NAME*/
 #task-3 {
   /* Styles goes here */
+  $color-primary: #86b111;
+  $color-error: #dc3545;
+  $color-success: $color-primary;
+
+  $border-color: #ced4da;
+  $border-radius: .25rem;
+
+  $form-background-color: #f7f7f7;
+
+  @mixin state-focus {
+    border-color: $color-primary;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba($color-primary, 0.15);
+  }
+  
+  @mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .form {
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: $form-background-color;
+    border-radius: $border-radius;
+  }
+
+  .form__group {
+    margin-bottom: 1rem;
+
+    &--flex {
+      display: flex;
+    }
+  }
+
+  .form__control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #fff;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:focus {
+      @include state-focus;
+    }
+
+    &.form__control--error {
+      border-color: $color-error;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: $border-radius;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out;
+    cursor: pointer;
+
+    &:focus {
+      @include state-focus;
+    }
+  }
+
+  .btn[aria-pressed='true'] {
+    color: #fff;
+    background-color: $color-success;
+    border-color: $color-success;
+
+    &:hover {
+      background-color: darken($color-success, 10%);
+      border-color: darken($color-success, 10%);
+    }
+  }
+
+  .btn--primary {
+    color: #fff;
+    background-color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+      border-color: darken($color-primary, 10%);
+    }
+  }
+
+  .todoapp__filters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .todoapp__list {
+    @include reset-list;
+  }
 }
